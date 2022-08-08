@@ -78,12 +78,12 @@ class MainViewController: UIViewController {
         view.addSubview(collectionView)
         collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
         collectionView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        collectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.75).isActive = true
+        collectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.8).isActive = true
         collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 
         view.addSubview(stackView)
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        stackView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 25).isActive = true
+        stackView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 10).isActive = true
         stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
     }
     
@@ -115,7 +115,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth = collectionView.frame.width/1.1
-        let cellHeight = cellWidth/2
+        let cellHeight = collectionView.frame.height/4.25
         return CGSize(width: cellWidth, height: cellHeight)
     }
 }
